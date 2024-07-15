@@ -2,6 +2,10 @@ const hexadecimalNumberSystem = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "
 let button = document.getElementById("button")
 let firstColorBox = document.getElementById("first-color-box")
 let firstHexCode = document.getElementById("first-hex-code")
+let secondColorBox = document.getElementById("second-color-box")
+let secondHexCode = document.getElementById("second-hex-code")
+let thirdColorBox = document.getElementById("third-color-box")
+let thirdHexCode = document.getElementById("third-hex-code")
 
 function generateRandomNumber(){
     let randomNumber = Math.floor(Math.random() * hexadecimalNumberSystem.length) 
@@ -9,6 +13,7 @@ function generateRandomNumber(){
 }
 
 button.addEventListener("click", function(){
+    // loop for first box
     let hexCodeForFirstBox = "#"
     for(let myFirstLoop = 0; myFirstLoop < 6; myFirstLoop++){
         hexCodeForFirstBox += hexadecimalNumberSystem[generateRandomNumber()]
@@ -16,8 +21,19 @@ button.addEventListener("click", function(){
     firstColorBox.style.backgroundColor = hexCodeForFirstBox
     firstHexCode.textContent = hexCodeForFirstBox
 
+    // loop for second box
+    let hexCodeForSecondBox = "#"
+    for(let mySecondLoop = 0; mySecondLoop < 6; mySecondLoop++){
+        hexCodeForSecondBox += hexadecimalNumberSystem[generateRandomNumber()]
+    }
+    secondColorBox.style.backgroundColor = hexCodeForSecondBox
+    secondHexCode.textContent = hexCodeForSecondBox
     
-
+    // loop for third box
+    let hexCodeForThirdBox = "#"
+    for(let myThirdLoop = 0; myThirdLoop < 6; myThirdLoop++){
+        hexCodeForThirdBox += hexadecimalNumberSystem[generateRandomNumber()]
+    }
+    thirdColorBox.style.backgroundColor = hexCodeForThirdBox
+    thirdHexCode.textContent = hexCodeForThirdBox
 })
-
-

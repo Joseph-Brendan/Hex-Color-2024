@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .color-generation-container{
-    width: 60%;
+    width: 65%;
     height: auto;
     background-color: #f8f8f8;
     margin: 0 auto;
