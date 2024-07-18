@@ -44,3 +44,18 @@ function validateEmailInput(){
 }
 
 
+// Phone Number Input Validation
+phoneNumberInput.addEventListener("keyup", function(){
+    validatePhonumber()
+})
+
+function validatePhonumber(){
+    let userPhoneNumber = phoneNumberInput.value
+    if(userPhoneNumber.length !== 11){
+        phoneAlert.innerText = `Phone number must be 11 digits`
+        phoneNumberInput.style.border = "1px solid red"
+    }else{
+        phoneAlert.innerText = ``
+        phoneNumberInput.style.border = "2px solid green"
+    }
+}
